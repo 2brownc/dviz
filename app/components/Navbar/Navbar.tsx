@@ -14,7 +14,6 @@ function NavItem({ label, url }: { label: string, url: string }) {
 
 const TopNavbar = ({ userid }: { userid: string }) => {
   return (
-
     <div className="navbar bg-base-100 z-10 flex-auto justify-between shadow-md rounded-lg">
 
       <div className="hidden md:block">

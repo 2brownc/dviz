@@ -1,4 +1,4 @@
-import TopNavbar from '../components/Navbar';
+import TopNavbar from '../components/Navbar/Navbar';
 import { getUserEmail } from '../firebase';
 
 export default async function DashboardLayout({
@@ -9,7 +9,11 @@ export default async function DashboardLayout({
   const email = await getUserEmail();
   return (
     <section>
-      <nav><TopNavbar userid={email.split('@')[0]} /></nav>
+      <nav>
+        <TopNavbar
+          userid={email.split('@')[0]}
+        />
+      </nav>
       <main>{children}</main>
     </section>
   )

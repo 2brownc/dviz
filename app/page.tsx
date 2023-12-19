@@ -19,9 +19,9 @@ export default async function Home() {
 
   const handleLoginSubmit = async (formData: FormData) => {
     "use server";
-    const email = formData.get('email') as string;
-    const password = formData.get('password') as string;
-    await login(email, password);
+    const email = formData.get('email');
+    const password = formData.get('password');
+    await login(email as string, password as string);
   }
 
   const loginUser1 = async () => {
